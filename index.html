@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Result Management System</h1>
+
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="number" id="m1" placeholder="Subject 1">
+    <input type="number" id="m2" placeholder="Subject 2">
+    <input type="number" id="m3" placeholder="Subject 3">
+
+    <button onclick="addStudent()">Add Result</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Total</th>
+                <th>Average</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+
+        <tbody id="resultTable">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

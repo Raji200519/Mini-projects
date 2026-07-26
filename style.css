@@ -1,0 +1,51 @@
+body{
+    font-family: Arial;
+    background:#f4f4f4;
+}
+
+.container{
+    width:700px;
+    margin:auto;
+    margin-top:30px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    width:95%;
+    padding:10px;
+    margin:8px;
+}
+
+button{
+    width:98%;
+    padding:10px;
+    background:blue;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+table{
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
