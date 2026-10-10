@@ -1,38 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Result Management System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Student Result Management System</h1>
+    <div class="game-container">
+        <h1>🐤 Flappy Bird Adventure</h1>
+        <p class="subtitle">Fly high and avoid the pipes!</p>
 
-    <input type="text" id="name" placeholder="Student Name">
-    <input type="number" id="m1" placeholder="Subject 1">
-    <input type="number" id="m2" placeholder="Subject 2">
-    <input type="number" id="m3" placeholder="Subject 3">
+        <div class="score-board">
+            Score: <span id="score">0</span>
+            <span class="best-score">Best: <span id="best">0</span></span>
+        </div>
 
-    <button onclick="addStudent()">Add Result</button>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Total</th>
-                <th>Average</th>
-                <th>Grade</th>
-            </tr>
-        </thead>
+        <p id="message">Press START to play!</p>
 
-        <tbody id="resultTable">
+        <button id="startButton">START GAME</button>
 
-        </tbody>
-    </table>
-</div>
+        <p class="instructions">
+            Press SPACE, click, or tap to fly!
+        </p>
+    </div>
 
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
