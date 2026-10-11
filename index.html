@@ -1,108 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Clone</title>
+    <title>Flappy Bird Adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">amazon<span>.in</span></a>
 
-        <div class="location">
-            <small>Deliver to</small>
-            <strong>India</strong>
+    <div class="game-container">
+        <h1>🐤 Flappy Bird Adventure</h1>
+        <p class="subtitle">Fly high and avoid the pipes!</p>
+
+        <div class="score-board">
+            Score: <span id="score">0</span>
+            <span class="best-score">Best: <span id="best">0</span></span>
         </div>
 
-        <div class="search">
-            <select aria-label="Product category">
-                <option>All</option>
-                <option>Electronics</option>
-                <option>Fashion</option>
-                <option>Books</option>
-            </select>
-            <input type="text" placeholder="Search Amazon.in">
-            <button aria-label="Search">🔍</button>
-        </div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
 
-        <div class="account">
-            <small>Hello, sign in</small>
-            <strong>Account & Lists</strong>
-        </div>
+        <p id="message">Press START to play!</p>
 
-        <div class="orders">
-            <small>Returns</small>
-            <strong>& Orders</strong>
-        </div>
+        <button id="startButton">START GAME</button>
 
-        <div class="cart">🛒 Cart</div>
-    </header>
-    <nav class="navbar">
-        <a href="#">☰ All</a>
-        <a href="#products">Today's Deals</a>
-        <a href="#products">Mobiles</a>
-        <a href="#products">Electronics</a>
-        <a href="#products">Fashion</a>
-        <a href="#products">Home & Kitchen</a>
-        <a href="#products">Books</a>
-    </nav>
-    <section class="hero">
-        <div class="hero-content">
-            <p>BIG SAVINGS, EVERY DAY</p>
-            <h1>Upgrade Your Lifestyle</h1>
-            <p>Explore electronics, fashion and more.</p>
-            <a href="#products" class="shop-button">Shop Now</a>
-        </div>
-    </section>
-    <main id="products" class="products-section">
-        <h2>Popular Products</h2>
+        <p class="instructions">
+            Press SPACE, click, or tap to fly!
+        </p>
+    </div>
 
-        <div class="product-grid">
-
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80"
-                     alt="Wireless headphones">
-                <h3>Wireless Headphones</h3>
-                <p class="rating">★★★★☆ (4.2)</p>
-                <p class="price">₹1,499</p>
-                <button class="add-button">Add to Cart</button>
-            </article>
-
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80"
-                     alt="Wrist watch">
-                <h3>Classic Wrist Watch</h3>
-                <p class="rating">★★★★★ (4.5)</p>
-                <p class="price">₹999</p>
-                <button class="add-button">Add to Cart</button>
-            </article>
-
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80"
-                     alt="Red sports shoe">
-                <h3>Sports Shoes</h3>
-                <p class="rating">★★★★☆ (4.0)</p>
-                <p class="price">₹1,799</p>
-                <button class="add-button">Add to Cart</button>
-            </article>
-
-            <article class="product-card">
-                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=80"
-                     alt="Digital camera">
-                <h3>Digital Camera</h3>
-                <p class="rating">★★★★★ (4.7)</p>
-                <p class="price">₹8,999</p>
-                <button class="add-button">Add to Cart</button>
-            </article>
-
-        </div>
-    </main>
-    <footer class="footer">
-        <a href="#">Back to top ↑</a>
-        <p>Amazon Clone | Created for learning HTML and CSS</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
