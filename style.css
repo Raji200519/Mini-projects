@@ -1,101 +1,297 @@
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    min-height: 100vh;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #9face6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    background: #e3e6e6;
+    color: #111;
 }
 
-.game-container {
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
-    background: white;
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: #4f46e5;
-    font-size: 25px;
-    margin: 0 0 8px;
-}
-
-.subtitle {
-    color: #666;
-    margin: 0 0 15px;
-}
-
-.score-board {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: bold;
-    color: #2563eb;
-    margin-bottom: 12px;
-}
-
-.best-score {
-    color: #e67e22;
-}
-
-canvas {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 4px solid #38bdf8;
-    border-radius: 15px;
-    background: #87ceeb;
-    touch-action: none;
-}
-
-#message {
-    font-weight: bold;
-    color: #374151;
-    min-height: 20px;
-    margin: 15px 0;
-}
-
-button {
-    background: linear-gradient(90deg, #ff9800, #ff5722);
+.header {
+    background: #131921;
     color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 13px 30px;
-    font-size: 17px;
+    min-height: 70px;
+    padding: 12px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.logo {
+    font-size: 28px;
     font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-button:hover {
-    transform: scale(1.05);
+.logo span {
+    color: #ff9900;
+    font-size: 16px;
 }
 
-button:active {
-    transform: scale(0.97);
+.location,
+.account,
+.orders {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    white-space: nowrap;
 }
 
-.instructions {
-    color: #666;
+.header small {
+    color: #ddd;
+    font-size: 11px;
+}
+
+.header strong {
     font-size: 13px;
-    margin-bottom: 0;
 }
 
-@media (max-width: 420px) {
-    .game-container {
-        padding: 14px;
+.search {
+    display: flex;
+    flex: 1;
+    min-width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search select {
+    width: 55px;
+    border: none;
+    background: #e6e6e6;
+    padding: 5px;
+}
+
+.search input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search button {
+    width: 45px;
+    border: none;
+    background: #febd69;
+    cursor: pointer;
+}
+
+.search:focus-within {
+    outline: 3px solid #ff9900;
+}
+
+.cart {
+    font-weight: bold;
+    white-space: nowrap;
+}
+.navbar {
+    background: #232f3e;
+    padding: 12px 3%;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    outline: 1px solid white;
+    padding: 4px;
+}
+.hero {
+    min-height: 300px;
+    padding: 45px 6%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, #f7d7a6, #f7d7a6cc, #ffffff00),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=80")
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 420px;
+}
+
+.hero-content p {
+    margin-bottom: 14px;
+}
+
+.hero-content h1 {
+    font-size: clamp(28px, 4vw, 44px);
+    margin-bottom: 16px;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-top: 10px;
+    background: #ff9900;
+    color: #111;
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.products-section {
+    padding: 28px 4%;
+}
+
+.products-section h2 {
+    margin-bottom: 22px;
+    font-size: 25px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 18px;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000018;
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #e47911;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-button {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 20px;
+    background: #ffd814;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background: #f7ca00;
+}
+
+.footer {
+    background: #131a22;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
     }
 
-    h1 {
-        font-size: 21px;
+    .search {
+        order: 2;
+        flex-basis: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 480px) {
+    .header {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .location,
+    .orders {
+        display: none;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .account strong {
+        font-size: 11px;
+    }
+
+    .navbar {
+        gap: 18px;
+        padding: 12px;
+    }
+
+    .hero {
+        min-height: 260px;
+        padding: 25px;
+    }
+
+    .products-section {
+        padding: 20px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 120px;
+    }
+
+    .product-card h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 18px;
     }
 }
